@@ -1,12 +1,45 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/today/today",
+    "template/listmeau"    
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black",
+    "navigationBarTitleText": "Flower饮食",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color": "#9c9c9c",
+    "backgroundColor":"#ffffff",
+    "borderStyle": "#9c9c9c",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/home.png",
+        "iconPath": "pages/images/selecthome.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/images/pencil.png",
+        "iconPath": "pages/images/selectpencil.png",
+        "pagePath": "pages/logs/logs",
+        "text": "我的搭配"
+      },
+      {
+        "selectedIconPath": "pages/images/personal.png",
+        "iconPath": "pages/images/selectpersonal.png",
+        "pagePath": "pages/logs/logs",
+        "text": "私人订制"
+      },
+      {
+        "selectedIconPath": "pages/images/user.png",
+        "iconPath": "pages/images/selectuser.png",
+        "pagePath": "template/listmeau",
+        "text": "我的"
+      }
+    ]
   }
 }

@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -7,13 +7,77 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-  <view>{{msg}}</view>
   <button bindtap="clickMe">点击我</button>
-  <view wx:for="{{array}}">
-    <view wx:if="{{item=='3'}}">这是3</view>
-    <view wx:else> {{item}} </view>
+</view> -->
+
+  <swiper indicator-dots="true"
+  autoplay="true" interval="3000" duration="600" circular="true" style="height: 240px">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="mainPic" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="contentwo">
+ <view class="icon-meau" bindtap="clickToday">
+    <image src="https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/today.png" class="icon" />
+    <text class="icon-font">今日推荐</text>
+ </view>
+  <view class="icon-meau" bindtap="clickHot">
+      <image src="https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/meau.png" class="icon" />
+      <text class="icon-font">热门搭配</text>
+  </view>
+  <view class="icon-meau" bindtap="clickmeal">
+      <image src="https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/meal.png" class="icon" />
+      <text class="icon-font">荤食搭配</text>
+    </view>
+    <view class="icon-meau" bindtap="clickvegetables">
+        <image src="https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/vegetable.png" class="icon" />
+        <text class="icon-font">素食搭配</text>
+    </view>
+    <view class="icon-meau" bindtap="">
+      <image src="https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/hamber.png" class="icon" />
+      <text class="icon-font">放开吃！</text>
+  </view>
+</view>
+
+<view class="contentfive">
+    <image src="../images/Custom.jpg" style="width:100%;height: 65px;border-radius: 0.2em"/>
+</view>
+
+<view class="contenthree">
+  <view>
+      <image src="https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/count.png" class="icon-two"/>
+      <text class="fonthree" style="color:#27a9cd">代谢计算</text> 
+  </view>
+  <view>
+      <image src="https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/love.png" class="icon-two"/>
+      <text class="fonthree" style="color:#ff5c5c">口味偏向</text>
+  </view>
+  <view>
+      <image src="https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/check.png" class="icon-two"/>
+      <text class="fonthree" style="color:#f49e67">习惯调查</text>
+  </view>
+</view>
+
+
+<view style="border-radius: 0.2em;width: 200px;margin: 0px auto; background-color: lightgreen;color: white;text-align: center;">
+  优秀搭配
+</view>
+<view>
+  <view class="contentfour">
+    <view class="sidetwo1" style="background-image: url(../images/beef.jpg);">
+      <text class="biaoqian">热辣牛肉沙拉</text>
+    </view>
+
+    <view class="sidetwo2" style="margin-left:7px">
+    <view id="sidetwo3" style="height: 90px;background-image: url(../images/salad.jpg);">
+      <text class="biaoqian">全素沙拉</text>
+    </view>
+    <view id="sidetwo4" style="height: 85px;margin-top: 5px;background-image: url(../images/tomoto.jpg);">
+      <text class="biaoqian">土味西红柿</text>
+    </view>
+    </view>
   </view>
 </view>

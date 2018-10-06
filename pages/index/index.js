@@ -8,15 +8,16 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    array:[313,211,911]
+    ListArray:['首页','分类','我的','更多'],
+    imgUrls: [
+      'https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/FlowerLogo.jpg',
+      'https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/IMG_3459.JPG',
+      'https://flowerwechat.oss-cn-shenzhen.aliyuncs.com/flower_BGM.jpg'
+    ]
   },
-  clickMe:function(){
-    this.setData({msg:"Flower"})
-  },
-  //事件处理函数
-  bindViewTap: function() {
+  clickToday:function(){
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '/pages/today/today'
     })
   },
   onLoad: function () {
